@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marcus Webb — Senior Product Manager</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Inter', 'system-ui', 'sans-serif'] },
+                    colors: { accent: '#E09F3E' }
+                }
+            }
+        }
+    </script>
+    <style>
+        * { font-family: 'Inter', system-ui, sans-serif; }
+    </style>
+</head>
+<body class="bg-gray-950 text-gray-300 antialiased">
+
+    <!-- Header -->
+    <header>
+        <div class="max-w-3xl mx-auto px-6 py-16 sm:py-20">
+            <div class="flex flex-col sm:flex-row items-center sm:items-start gap-6">
+                <img src="headshot.png" alt="Marcus Webb" class="w-28 h-28 sm:w-[120px] sm:h-[120px] rounded-full object-cover border-[3px] border-gray-800 flex-shrink-0">
+                <div class="text-center sm:text-left">
+                    <h1 class="text-3xl sm:text-4xl font-bold text-white">Marcus Webb</h1>
+                    <p class="mt-2 text-lg text-[#E09F3E] font-medium">Senior Product Manager</p>
+                    <p class="mt-1 text-sm text-gray-500">New York, NY</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-3xl mx-auto px-6">
+
+        <!-- About -->
+        <section class="py-10 sm:py-14">
+            <h2 class="text-sm font-semibold uppercase tracking-wider text-[#E09F3E]/80 mb-4">About</h2>
+            <p class="text-gray-400 leading-relaxed text-[15px]">
+                Product manager with 5 years of experience shipping B2B software across data infrastructure, cloud analytics, and workflow automation. I turn ambiguous customer problems into measurable product outcomes. My approach is structured and evidence-forward: run the discovery, frame the problem, build the business case, then ship and measure. I operate well at the intersection of business strategy and technical implementation.
+            </p>
+        </section>
+
+        <div class="h-px bg-gray-800/60"></div>
+
+        <!-- Experience -->
+        <section class="py-10 sm:py-14">
+            <h2 class="text-sm font-semibold uppercase tracking-wider text-[#E09F3E]/80 mb-8">Experience</h2>
+
+            <div class="mb-10">
+                <div class="flex flex-col sm:flex-row sm:items-baseline sm:justify-between mb-1">
+                    <h3 class="text-lg font-semibold text-white">Senior Product Manager</h3>
+                    <span class="text-sm text-gray-600 mt-0.5 sm:mt-0">2023 -- Present</span>
+                </div>
+                <p class="text-sm text-[#E09F3E] font-medium mb-3">Atlas Data &middot; Series C &middot; 200 employees</p>
+                <ul class="space-y-2 text-[15px] text-gray-400 leading-relaxed">
+                    <li>Defined and shipped the self-serve query builder from zero, growing adoption from 0 to 1,400 monthly active users in 8 months by pivoting from advanced features to guided onboarding after a 32-customer discovery sprint.</li>
+                    <li>Led pricing restructure for the platform tier, introducing usage-based billing that increased net revenue per account by 23%.</li>
+                    <li>Drove a cross-functional initiative to reduce query builder p95 latency from 4.2s to 1.1s, resulting in 31% increase in daily query volume.</li>
+                    <li>Established an experimentation framework (feature flags + Amplitude) now used by 4 product teams across the org.</li>
+                    <li>Partnered with sales engineering on a solutions consulting workflow, contributing to 3 enterprise deals worth $1.8M combined ARR.</li>
+                </ul>
+            </div>
+
+            <div class="mb-10">
+                <div class="flex flex-col sm:flex-row sm:items-baseline sm:justify-between mb-1">
+                    <h3 class="text-lg font-semibold text-white">Product Manager</h3>
+                    <span class="text-sm text-gray-600 mt-0.5 sm:mt-0">2021 -- 2023</span>
+                </div>
+                <p class="text-sm text-[#E09F3E] font-medium mb-3">Nimbus Analytics &middot; Series B &middot; 120 employees</p>
+                <ul class="space-y-2 text-[15px] text-gray-400 leading-relaxed">
+                    <li>Owned the dashboard product end-to-end, shipping 14 features across 6 release cycles with a team of 5 engineers and 1 designer.</li>
+                    <li>Ran 8 A/B tests on onboarding flows; winning variant reduced time-to-first-dashboard from 22 minutes to 9 minutes.</li>
+                    <li>Redesigned the dashboard sharing workflow based on 25 customer interviews; sharing adoption increased 52% within one quarter.</li>
+                    <li>Authored product requirements for SOC 2 compliance features, enabling Nimbus to close its first 3 enterprise contracts ($540K ARR).</li>
+                </ul>
+            </div>
+
+            <div class="mb-10">
+                <div class="flex flex-col sm:flex-row sm:items-baseline sm:justify-between mb-1">
+                    <h3 class="text-lg font-semibold text-white">Associate PM / Product Manager</h3>
+                    <span class="text-sm text-gray-600 mt-0.5 sm:mt-0">2019 -- 2021</span>
+                </div>
+                <p class="text-sm text-[#E09F3E] font-medium mb-3">Streamline &middot; Seed Stage &middot; 35 employees</p>
+                <ul class="space-y-2 text-[15px] text-gray-400 leading-relaxed">
+                    <li>First product hire; established the product development process from scratch -- spec templates, sprint cadence, release checklists, and monthly product reviews.</li>
+                    <li>Conducted 60+ customer discovery interviews in the first 6 months, synthesizing findings into 4 persona documents that guided all feature decisions.</li>
+                    <li>Defined and shipped the workflow template marketplace, which became the #2 acquisition channel (22% of new signups) within 3 months of launch.</li>
+                    <li>Led the v2 redesign of the core workflow editor, resulting in 40% fewer support tickets and 28% improvement in task completion rate.</li>
+                </ul>
+            </div>
+        </section>
+
+        <div class="h-px bg-gray-800/60"></div>
+
+        <!-- Skills -->
+        <section class="py-10 sm:py-14">
+            <h2 class="text-sm font-semibold uppercase tracking-wider text-[#E09F3E]/80 mb-6">Skills</h2>
+            <div class="flex flex-wrap gap-2">
+                <span class="px-3 py-1.5 bg-gray-800/50 text-gray-300 text-sm rounded-full border border-gray-800">Product Strategy</span>
+                <span class="px-3 py-1.5 bg-gray-800/50 text-gray-300 text-sm rounded-full border border-gray-800">Customer Discovery</span>
+                <span class="px-3 py-1.5 bg-gray-800/50 text-gray-300 text-sm rounded-full border border-gray-800">A/B Testing</span>
+                <span class="px-3 py-1.5 bg-gray-800/50 text-gray-300 text-sm rounded-full border border-gray-800">Pricing & Packaging</span>
+                <span class="px-3 py-1.5 bg-gray-800/50 text-gray-300 text-sm rounded-full border border-gray-800">Roadmap Prioritization</span>
+                <span class="px-3 py-1.5 bg-gray-800/50 text-gray-300 text-sm rounded-full border border-gray-800">SQL & Analytics</span>
+                <span class="px-3 py-1.5 bg-gray-800/50 text-gray-300 text-sm rounded-full border border-gray-800">Developer Experience</span>
+                <span class="px-3 py-1.5 bg-gray-800/50 text-gray-300 text-sm rounded-full border border-gray-800">Cross-Functional Leadership</span>
+                <span class="px-3 py-1.5 bg-gray-800/50 text-gray-300 text-sm rounded-full border border-gray-800">Experimentation</span>
+            </div>
+        </section>
+
+        <div class="h-px bg-gray-800/60"></div>
+
+        <!-- Education -->
+        <section class="py-10 sm:py-14">
+            <h2 class="text-sm font-semibold uppercase tracking-wider text-[#E09F3E]/80 mb-4">Education</h2>
+            <div>
+                <h3 class="font-semibold text-white">University of Virginia</h3>
+                <p class="text-sm text-gray-500 mt-0.5">B.S. Systems Engineering, Minor in Economics &middot; 2019</p>
+            </div>
+        </section>
+
+        <div class="h-px bg-gray-800/60"></div>
+
+        <!-- Contact -->
+        <section class="py-10 sm:py-14">
+            <h2 class="text-sm font-semibold uppercase tracking-wider text-[#E09F3E]/80 mb-4">Contact</h2>
+            <div class="space-y-2 text-[15px]">
+                <p class="text-gray-400"><span class="text-gray-600 inline-block w-16">Email</span> <a href="mailto:marcus@marcuswebb.me" class="text-[#E09F3E] hover:underline">marcus@marcuswebb.me</a></p>
+                <p class="text-gray-400"><span class="text-gray-600 inline-block w-16">Based in</span> New York, NY</p>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="border-t border-gray-800/60">
+        <div class="max-w-3xl mx-auto px-6 py-8 text-center text-xs text-gray-700">
+            &copy; 2026 Marcus Webb
+        </div>
+    </footer>
+
+</body>
+</html>
