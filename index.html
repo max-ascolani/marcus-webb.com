@@ -3,146 +3,475 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Marcus Webb — Senior Product Manager</title>
+    <title>Marcus Webb</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;450;500;600;700;800;900&display=swap" rel="stylesheet">
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     fontFamily: { sans: ['Inter', 'system-ui', 'sans-serif'] },
-                    colors: { accent: '#E09F3E' }
+                    colors: {
+                        amber: {
+                            DEFAULT: '#E09F3E',
+                            light: '#FDF6EB',
+                            muted: '#C4893A',
+                            pale: '#F5E6CE',
+                        },
+                        ink: '#1C1917',
+                        paper: '#FDFCFA',
+                        stone: '#57534E',
+                        pebble: '#A8A29E',
+                    }
                 }
             }
         }
     </script>
     <style>
         * { font-family: 'Inter', system-ui, sans-serif; }
+        html { scroll-behavior: smooth; }
+
+        .big-number {
+            font-weight: 900;
+            letter-spacing: -0.04em;
+            line-height: 1;
+            color: #E09F3E;
+        }
+
+        .evidence-bar {
+            height: 3px;
+            background: linear-gradient(90deg, #E09F3E, #E09F3E00);
+        }
+
+        .section-rule {
+            height: 1px;
+            background: linear-gradient(90deg, #E09F3E33, transparent 70%);
+        }
+
+        @media (max-width: 640px) {
+            .hero-number { font-size: 3.5rem !important; }
+        }
     </style>
 </head>
-<body class="bg-gray-950 text-gray-300 antialiased">
+<body class="bg-paper text-ink antialiased">
 
-    <!-- Header -->
-    <header>
-        <div class="max-w-3xl mx-auto px-6 py-16 sm:py-20">
-            <div class="flex flex-col sm:flex-row items-center sm:items-start gap-6">
-                <img src="headshot.png" alt="Marcus Webb" class="w-28 h-28 sm:w-[120px] sm:h-[120px] rounded-full object-cover border-[3px] border-gray-800 flex-shrink-0">
-                <div class="text-center sm:text-left">
-                    <h1 class="text-3xl sm:text-4xl font-bold text-white">Marcus Webb</h1>
-                    <p class="mt-2 text-lg text-[#E09F3E] font-medium">Senior Product Manager</p>
-                    <p class="mt-1 text-sm text-gray-500">New York, NY</p>
+    <!-- Hero -->
+    <header class="max-w-3xl mx-auto px-6 sm:px-8">
+        <div class="pt-12 sm:pt-20 pb-10 sm:pb-14">
+            <!-- Name row -->
+            <div class="flex items-center justify-between mb-10 sm:mb-14">
+                <div>
+                    <h1 class="text-2xl sm:text-3xl font-bold text-ink tracking-tight">Marcus Webb</h1>
+                    <p class="text-sm text-stone mt-0.5">Product Manager &middot; Brooklyn, NY</p>
+                </div>
+                <img src="headshot.png" alt="Marcus Webb" class="w-16 h-16 sm:w-20 sm:h-20 rounded-full object-cover border-2 border-amber/20 flex-shrink-0">
+            </div>
+
+            <!-- Hero statement -->
+            <div class="max-w-xl">
+                <p class="text-3xl sm:text-[2.6rem] font-extrabold text-ink leading-[1.15] tracking-tight">
+                    The highest-leverage thing a PM can do is figure out
+                    <span class="text-amber">the right problem.</span>
+                </p>
+                <p class="mt-5 text-base sm:text-[17px] text-stone leading-relaxed">
+                    Five years building B2B products across data infrastructure, cloud analytics,
+                    and workflow automation. I combine structured discovery with quantitative rigor
+                    to turn ambiguous problems into measurable outcomes. The work below shows how.
+                </p>
+            </div>
+
+            <!-- Quick proof strip -->
+            <div class="mt-10 flex flex-wrap gap-x-10 gap-y-4">
+                <div>
+                    <p class="big-number text-3xl sm:text-4xl hero-number">1,400</p>
+                    <p class="text-xs text-pebble mt-1">MAU built from zero</p>
+                </div>
+                <div>
+                    <p class="big-number text-3xl sm:text-4xl hero-number">+23%</p>
+                    <p class="text-xs text-pebble mt-1">revenue per account</p>
+                </div>
+                <div>
+                    <p class="big-number text-3xl sm:text-4xl hero-number">73%</p>
+                    <p class="text-xs text-pebble mt-1">latency reduction</p>
                 </div>
             </div>
         </div>
     </header>
 
-    <main class="max-w-3xl mx-auto px-6">
+    <div class="section-rule max-w-3xl mx-auto"></div>
 
-        <!-- About -->
-        <section class="py-10 sm:py-14">
-            <h2 class="text-sm font-semibold uppercase tracking-wider text-[#E09F3E]/80 mb-4">About</h2>
-            <p class="text-gray-400 leading-relaxed text-[15px]">
-                Product manager with 5 years of experience shipping B2B software across data infrastructure, cloud analytics, and workflow automation. I turn ambiguous customer problems into measurable product outcomes. My approach is structured and evidence-forward: run the discovery, frame the problem, build the business case, then ship and measure. I operate well at the intersection of business strategy and technical implementation.
-            </p>
-        </section>
+    <main class="max-w-3xl mx-auto px-6 sm:px-8">
 
-        <div class="h-px bg-gray-800/60"></div>
+        <!-- Case Studies -->
+        <section class="py-14 sm:py-20">
+            <p class="text-xs font-semibold uppercase tracking-[0.2em] text-amber mb-12">How I Think About Product</p>
 
-        <!-- Experience -->
-        <section class="py-10 sm:py-14">
-            <h2 class="text-sm font-semibold uppercase tracking-wider text-[#E09F3E]/80 mb-8">Experience</h2>
-
-            <div class="mb-10">
-                <div class="flex flex-col sm:flex-row sm:items-baseline sm:justify-between mb-1">
-                    <h3 class="text-lg font-semibold text-white">Senior Product Manager</h3>
-                    <span class="text-sm text-gray-600 mt-0.5 sm:mt-0">2023 -- Present</span>
+            <!-- Case Study 1 -->
+            <article class="mb-20">
+                <div class="flex items-baseline gap-3 mb-1">
+                    <span class="text-xs font-medium text-amber/70">Atlas Data</span>
+                    <span class="text-xs text-pebble">&middot;</span>
+                    <span class="text-xs text-pebble">2024</span>
                 </div>
-                <p class="text-sm text-[#E09F3E] font-medium mb-3">Atlas Data &middot; Series C &middot; 200 employees</p>
-                <ul class="space-y-2 text-[15px] text-gray-400 leading-relaxed">
-                    <li>Defined and shipped the self-serve query builder from zero, growing adoption from 0 to 1,400 monthly active users in 8 months by pivoting from advanced features to guided onboarding after a 32-customer discovery sprint.</li>
-                    <li>Led pricing restructure for the platform tier, introducing usage-based billing that increased net revenue per account by 23%.</li>
-                    <li>Drove a cross-functional initiative to reduce query builder p95 latency from 4.2s to 1.1s, resulting in 31% increase in daily query volume.</li>
-                    <li>Established an experimentation framework (feature flags + Amplitude) now used by 4 product teams across the org.</li>
-                    <li>Partnered with sales engineering on a solutions consulting workflow, contributing to 3 enterprise deals worth $1.8M combined ARR.</li>
-                </ul>
-            </div>
+                <h2 class="text-xl sm:text-2xl font-bold text-ink tracking-tight leading-snug mb-6">
+                    The growth plateau wasn't a feature gap.<br>It was an onboarding problem.
+                </h2>
 
-            <div class="mb-10">
-                <div class="flex flex-col sm:flex-row sm:items-baseline sm:justify-between mb-1">
-                    <h3 class="text-lg font-semibold text-white">Product Manager</h3>
-                    <span class="text-sm text-gray-600 mt-0.5 sm:mt-0">2021 -- 2023</span>
+                <div class="space-y-6">
+                    <div>
+                        <p class="text-[11px] font-bold uppercase tracking-[0.15em] text-amber/80 mb-2">Context</p>
+                        <p class="text-[15px] text-stone leading-relaxed">
+                            Atlas Data's self-serve query builder had plateaued at 600 MAU after launch.
+                            Leadership wanted to invest in advanced charting. I had a different hypothesis.
+                            The data showed a plateau, but it couldn't tell us why -- that required watching
+                            real users try to use the product.
+                        </p>
+                    </div>
+
+                    <div>
+                        <p class="text-[11px] font-bold uppercase tracking-[0.15em] text-amber/80 mb-2">The discovery</p>
+                        <p class="text-[15px] text-stone leading-relaxed">
+                            I recruited 32 enterprise users across 4 segments and ran a 6-week structured
+                            discovery sprint -- contextual inquiry (watching people use the product) combined
+                            with problem-space interviews. The finding was stark: 78% of churned users never
+                            got past the query configuration screen. They didn't know which data source to select.
+                            The product had the features. Users couldn't find the starting line.
+                        </p>
+                    </div>
+
+                    <div>
+                        <p class="text-[11px] font-bold uppercase tracking-[0.15em] text-amber/80 mb-2">The decision</p>
+                        <p class="text-[15px] text-stone leading-relaxed">
+                            I presented the findings to the VP of Product with a clear recommendation: pause
+                            advanced charting, invest in guided onboarding and query templates. The supporting
+                            data was decisive -- users who completed their first query in under 5 minutes had
+                            3.2x higher 30-day retention. The tradeoff was clear: short-term feature work
+                            versus fixing the foundation. I backed it with retention cohorts and the VP approved
+                            the pivot.
+                        </p>
+                    </div>
+
+                    <div>
+                        <p class="text-[11px] font-bold uppercase tracking-[0.15em] text-amber/80 mb-2">Outcome</p>
+                        <p class="text-[15px] text-stone leading-relaxed">
+                            We shipped a guided setup wizard and 12 pre-built query templates.
+                            MAU grew from 600 to 1,400 in 8 months. The advanced charting work was
+                            rescheduled to H2 -- with much better context on what charts users actually needed,
+                            informed by the usage data from the new cohorts.
+                        </p>
+                    </div>
                 </div>
-                <p class="text-sm text-[#E09F3E] font-medium mb-3">Nimbus Analytics &middot; Series B &middot; 120 employees</p>
-                <ul class="space-y-2 text-[15px] text-gray-400 leading-relaxed">
-                    <li>Owned the dashboard product end-to-end, shipping 14 features across 6 release cycles with a team of 5 engineers and 1 designer.</li>
-                    <li>Ran 8 A/B tests on onboarding flows; winning variant reduced time-to-first-dashboard from 22 minutes to 9 minutes.</li>
-                    <li>Redesigned the dashboard sharing workflow based on 25 customer interviews; sharing adoption increased 52% within one quarter.</li>
-                    <li>Authored product requirements for SOC 2 compliance features, enabling Nimbus to close its first 3 enterprise contracts ($540K ARR).</li>
-                </ul>
-            </div>
 
-            <div class="mb-10">
-                <div class="flex flex-col sm:flex-row sm:items-baseline sm:justify-between mb-1">
-                    <h3 class="text-lg font-semibold text-white">Associate PM / Product Manager</h3>
-                    <span class="text-sm text-gray-600 mt-0.5 sm:mt-0">2019 -- 2021</span>
+                <!-- Evidence strip -->
+                <div class="mt-8 pt-6 border-t border-stone/10">
+                    <div class="flex flex-wrap gap-x-8 gap-y-3">
+                        <div class="flex items-baseline gap-2">
+                            <span class="big-number text-2xl">32</span>
+                            <span class="text-xs text-pebble">users interviewed</span>
+                        </div>
+                        <div class="flex items-baseline gap-2">
+                            <span class="big-number text-2xl">600 &rarr; 1,400</span>
+                            <span class="text-xs text-pebble">MAU in 8 months</span>
+                        </div>
+                        <div class="flex items-baseline gap-2">
+                            <span class="big-number text-2xl">3.2x</span>
+                            <span class="text-xs text-pebble">retention differential</span>
+                        </div>
+                    </div>
                 </div>
-                <p class="text-sm text-[#E09F3E] font-medium mb-3">Streamline &middot; Seed Stage &middot; 35 employees</p>
-                <ul class="space-y-2 text-[15px] text-gray-400 leading-relaxed">
-                    <li>First product hire; established the product development process from scratch -- spec templates, sprint cadence, release checklists, and monthly product reviews.</li>
-                    <li>Conducted 60+ customer discovery interviews in the first 6 months, synthesizing findings into 4 persona documents that guided all feature decisions.</li>
-                    <li>Defined and shipped the workflow template marketplace, which became the #2 acquisition channel (22% of new signups) within 3 months of launch.</li>
-                    <li>Led the v2 redesign of the core workflow editor, resulting in 40% fewer support tickets and 28% improvement in task completion rate.</li>
-                </ul>
+            </article>
+
+            <!-- Case Study 2 -->
+            <article class="mb-20">
+                <div class="flex items-baseline gap-3 mb-1">
+                    <span class="text-xs font-medium text-amber/70">Atlas Data</span>
+                    <span class="text-xs text-pebble">&middot;</span>
+                    <span class="text-xs text-pebble">2024</span>
+                </div>
+                <h2 class="text-xl sm:text-2xl font-bold text-ink tracking-tight leading-snug mb-6">
+                    Restructuring pricing to align price with value --<br>without losing a single customer to churn.
+                </h2>
+
+                <div class="space-y-6">
+                    <div>
+                        <p class="text-[11px] font-bold uppercase tracking-[0.15em] text-amber/80 mb-2">Context</p>
+                        <p class="text-[15px] text-stone leading-relaxed">
+                            Atlas Data's platform tier used flat per-seat pricing. Heavy users paid the same as
+                            light users, creating margin pressure on one end and sticker shock on the other.
+                            The pricing model had worked at 50 customers. At 200+, it was starting to break.
+                        </p>
+                    </div>
+
+                    <div>
+                        <p class="text-[11px] font-bold uppercase tracking-[0.15em] text-amber/80 mb-2">The analysis</p>
+                        <p class="text-[15px] text-stone leading-relaxed">
+                            I structured the problem by asking: what usage metric most strongly correlates with
+                            expansion and retention? After analyzing 6 months of data, the answer was query volume.
+                            I benchmarked 8 competitors' pricing pages and designed a hybrid: base platform fee
+                            plus usage-based query tiers. Then I built a migration calculator. The critical number:
+                            80% of existing customers would see a lower or equal bill. That's the number that
+                            made the business case survivable.
+                        </p>
+                    </div>
+
+                    <div>
+                        <p class="text-[11px] font-bold uppercase tracking-[0.15em] text-amber/80 mb-2">The rollout</p>
+                        <p class="text-[15px] text-stone leading-relaxed">
+                            Partnered with sales to create a grandfathering plan for the 20% who'd see increases.
+                            Ran a 4-week beta with 15 accounts before general rollout -- enough to catch edge
+                            cases without losing momentum. The beta surfaced two billing-display bugs and one
+                            customer communication gap we fixed before going wide.
+                        </p>
+                    </div>
+
+                    <div>
+                        <p class="text-[11px] font-bold uppercase tracking-[0.15em] text-amber/80 mb-2">Outcome</p>
+                        <p class="text-[15px] text-stone leading-relaxed">
+                            Net revenue per account increased 23% within two quarters. Transition churn was 1.2%,
+                            well below the 3% threshold we'd set as the guardrail. The usage-based component
+                            also unlocked a new growth loop: accounts that grew usage naturally upgraded without
+                            sales intervention. That wasn't the goal, but it became one of the most valuable
+                            second-order effects.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="mt-8 pt-6 border-t border-stone/10">
+                    <div class="flex flex-wrap gap-x-8 gap-y-3">
+                        <div class="flex items-baseline gap-2">
+                            <span class="big-number text-2xl">+23%</span>
+                            <span class="text-xs text-pebble">revenue per account</span>
+                        </div>
+                        <div class="flex items-baseline gap-2">
+                            <span class="big-number text-2xl">1.2%</span>
+                            <span class="text-xs text-pebble">transition churn</span>
+                        </div>
+                        <div class="flex items-baseline gap-2">
+                            <span class="big-number text-2xl">15</span>
+                            <span class="text-xs text-pebble">beta accounts</span>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Case Study 3 -->
+            <article>
+                <div class="flex items-baseline gap-3 mb-1">
+                    <span class="text-xs font-medium text-amber/70">Nimbus Analytics</span>
+                    <span class="text-xs text-pebble">&middot;</span>
+                    <span class="text-xs text-pebble">2022</span>
+                </div>
+                <h2 class="text-xl sm:text-2xl font-bold text-ink tracking-tight leading-snug mb-6">
+                    8 experiments to cut time-to-value from 22 minutes to 9.
+                </h2>
+
+                <div class="space-y-6">
+                    <div>
+                        <p class="text-[11px] font-bold uppercase tracking-[0.15em] text-amber/80 mb-2">Context</p>
+                        <p class="text-[15px] text-stone leading-relaxed">
+                            Nimbus had a 45% drop-off rate between signup and first dashboard. The onboarding
+                            was a 7-step wizard that frontloaded configuration before showing any value.
+                            New users were leaving before they experienced the product. Classic time-to-value problem.
+                        </p>
+                    </div>
+
+                    <div>
+                        <p class="text-[11px] font-bold uppercase tracking-[0.15em] text-amber/80 mb-2">The approach</p>
+                        <p class="text-[15px] text-stone leading-relaxed">
+                            I mapped the existing flow and identified 3 steps that could be deferred: team setup,
+                            notification preferences, billing. Then designed a "value-first" variant that connected
+                            a sample data source automatically and dropped users into a pre-built dashboard.
+                            But I didn't stop at one test. I ran 8 sequential A/B experiments over 3 months --
+                            each building on the previous winner. Deferral order, sample data scope, copy variations,
+                            progressive disclosure patterns. Sequential testing because the design space was too
+                            large for a single multivariate test.
+                        </p>
+                    </div>
+
+                    <div>
+                        <p class="text-[11px] font-bold uppercase tracking-[0.15em] text-amber/80 mb-2">Outcome</p>
+                        <p class="text-[15px] text-stone leading-relaxed">
+                            Winning variant reduced time-to-first-dashboard from 22 minutes to 9 minutes.
+                            7-day activation rate went from 34% to 51%. The sample data sandbox became
+                            a permanent feature -- sales started using it in demos, which was an outcome
+                            nobody planned for but everyone benefited from.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="mt-8 pt-6 border-t border-stone/10">
+                    <div class="flex flex-wrap gap-x-8 gap-y-3">
+                        <div class="flex items-baseline gap-2">
+                            <span class="big-number text-2xl">22min &rarr; 9min</span>
+                            <span class="text-xs text-pebble">time-to-first-dashboard</span>
+                        </div>
+                        <div class="flex items-baseline gap-2">
+                            <span class="big-number text-2xl">8</span>
+                            <span class="text-xs text-pebble">experiments run</span>
+                        </div>
+                        <div class="flex items-baseline gap-2">
+                            <span class="big-number text-2xl">34% &rarr; 51%</span>
+                            <span class="text-xs text-pebble">activation rate</span>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </section>
+
+        <div class="section-rule"></div>
+
+        <!-- Career -->
+        <section class="py-14 sm:py-20">
+            <p class="text-xs font-semibold uppercase tracking-[0.2em] text-amber mb-10">Career</p>
+
+            <div class="space-y-10">
+                <!-- Atlas Data -->
+                <div>
+                    <div class="flex items-baseline justify-between mb-2">
+                        <h3 class="text-base font-bold text-ink">Atlas Data</h3>
+                        <span class="text-xs text-pebble">2023 &mdash; Present</span>
+                    </div>
+                    <p class="text-sm font-medium text-amber/80 mb-3">Senior Product Manager &middot; Series C &middot; 200 people</p>
+                    <p class="text-[15px] text-stone leading-relaxed">
+                        Own the self-serve analytics product line. Grew the query builder from 0 to 1,400 MAU.
+                        Led pricing restructure (+23% revenue/account). Drove cross-functional performance initiative
+                        (4.2s to 1.1s p95 latency, +31% query volume). Built the org's experimentation framework,
+                        now used by 4 product teams. Mentored 2 associate PMs through a structured onboarding program
+                        I designed -- both shipped independently by month 5.
+                    </p>
+                </div>
+
+                <!-- Nimbus -->
+                <div>
+                    <div class="flex items-baseline justify-between mb-2">
+                        <h3 class="text-base font-bold text-ink">Nimbus Analytics</h3>
+                        <span class="text-xs text-pebble">2021 &mdash; 2023</span>
+                    </div>
+                    <p class="text-sm font-medium text-amber/80 mb-3">Product Manager &middot; Series B &middot; 120 people</p>
+                    <p class="text-[15px] text-stone leading-relaxed">
+                        Owned the dashboard and visualization product. Shipped 14 features across 6 cycles.
+                        Redesigned sharing workflow (+52% adoption). Ran 8 onboarding A/B tests (22min to 9min
+                        time-to-first-dashboard). Authored SOC 2 compliance requirements that enabled the first
+                        3 enterprise contracts ($540K ARR). Overhauled API documentation, cutting support tickets 38%.
+                    </p>
+                </div>
+
+                <!-- Streamline -->
+                <div>
+                    <div class="flex items-baseline justify-between mb-2">
+                        <h3 class="text-base font-bold text-ink">Streamline</h3>
+                        <span class="text-xs text-pebble">2019 &mdash; 2021</span>
+                    </div>
+                    <p class="text-sm font-medium text-amber/80 mb-3">APM &rarr; Product Manager &middot; Seed Stage &middot; 35 people</p>
+                    <p class="text-[15px] text-stone leading-relaxed">
+                        First product hire. Built the development process from zero -- specs, sprint cadence,
+                        release checklists, monthly product reviews. Ran 60+ discovery interviews in 6 months.
+                        Shipped the workflow template marketplace (became #2 acquisition channel, 22% of signups).
+                        Led the v2 editor redesign (-40% support tickets, +28% task completion). Promoted from
+                        APM to PM in 14 months.
+                    </p>
+                </div>
+
+                <!-- Education -->
+                <div>
+                    <div class="flex items-baseline justify-between mb-2">
+                        <h3 class="text-base font-bold text-ink">University of Virginia</h3>
+                        <span class="text-xs text-pebble">2015 &mdash; 2019</span>
+                    </div>
+                    <p class="text-sm font-medium text-amber/80 mb-3">B.S. Systems Engineering &middot; Minor in Economics</p>
+                    <p class="text-[15px] text-stone leading-relaxed">
+                        Dean's List (6 semesters). VP of the Product & Design Club.
+                        TA for Decision Analysis. Capstone: hospital patient flow simulation
+                        that reduced average wait time by 18%.
+                    </p>
+                </div>
             </div>
         </section>
 
-        <div class="h-px bg-gray-800/60"></div>
+        <div class="section-rule"></div>
 
-        <!-- Skills -->
-        <section class="py-10 sm:py-14">
-            <h2 class="text-sm font-semibold uppercase tracking-wider text-[#E09F3E]/80 mb-6">Skills</h2>
-            <div class="flex flex-wrap gap-2">
-                <span class="px-3 py-1.5 bg-gray-800/50 text-gray-300 text-sm rounded-full border border-gray-800">Product Strategy</span>
-                <span class="px-3 py-1.5 bg-gray-800/50 text-gray-300 text-sm rounded-full border border-gray-800">Customer Discovery</span>
-                <span class="px-3 py-1.5 bg-gray-800/50 text-gray-300 text-sm rounded-full border border-gray-800">A/B Testing</span>
-                <span class="px-3 py-1.5 bg-gray-800/50 text-gray-300 text-sm rounded-full border border-gray-800">Pricing & Packaging</span>
-                <span class="px-3 py-1.5 bg-gray-800/50 text-gray-300 text-sm rounded-full border border-gray-800">Roadmap Prioritization</span>
-                <span class="px-3 py-1.5 bg-gray-800/50 text-gray-300 text-sm rounded-full border border-gray-800">SQL & Analytics</span>
-                <span class="px-3 py-1.5 bg-gray-800/50 text-gray-300 text-sm rounded-full border border-gray-800">Developer Experience</span>
-                <span class="px-3 py-1.5 bg-gray-800/50 text-gray-300 text-sm rounded-full border border-gray-800">Cross-Functional Leadership</span>
-                <span class="px-3 py-1.5 bg-gray-800/50 text-gray-300 text-sm rounded-full border border-gray-800">Experimentation</span>
+        <!-- What Informs My Thinking -->
+        <section class="py-14 sm:py-20">
+            <p class="text-xs font-semibold uppercase tracking-[0.2em] text-amber mb-8">What Informs My Thinking</p>
+
+            <div class="grid sm:grid-cols-2 gap-6">
+                <div class="bg-amber-light/50 border border-amber/10 rounded-lg p-5">
+                    <p class="text-sm font-bold text-ink mb-2">Behavioral Economics</p>
+                    <p class="text-[14px] text-stone leading-relaxed">
+                        Kahneman's work on cognitive biases has directly shaped how I design experiments and
+                        user flows. <em>Thinking in Bets</em> by Annie Duke changed how I think about product
+                        decisions under uncertainty. When I killed Atlas Data's charting roadmap in favor of
+                        onboarding, that was a bet -- informed by data, not guaranteed by it.
+                    </p>
+                </div>
+
+                <div class="bg-amber-light/50 border border-amber/10 rounded-lg p-5">
+                    <p class="text-sm font-bold text-ink mb-2">Chess</p>
+                    <p class="text-[14px] text-stone leading-relaxed">
+                        USCF rated, ~1650 Elo. Chess teaches you that every decision has second and third-order
+                        effects. The pricing restructure at Atlas wasn't about revenue this quarter --
+                        it was about setting up the expansion motion for the next two years. Same principle
+                        as playing for board position, not material advantage.
+                    </p>
+                </div>
+
+                <div class="bg-amber-light/50 border border-amber/10 rounded-lg p-5">
+                    <p class="text-sm font-bold text-ink mb-2">Basketball</p>
+                    <p class="text-[14px] text-stone leading-relaxed">
+                        Weekend pickup league in Prospect Park. I play point guard --
+                        it's more about reading the floor than scoring. Finding the open player,
+                        creating space, making the right pass. That's a decent metaphor for
+                        cross-functional product work.
+                    </p>
+                </div>
+
+                <div class="bg-amber-light/50 border border-amber/10 rounded-lg p-5">
+                    <p class="text-sm font-bold text-ink mb-2">Mentorship</p>
+                    <p class="text-[14px] text-stone leading-relaxed">
+                        I volunteer with Code2040, mentoring underrepresented students in tech.
+                        I grew up in Richmond, VA -- mixed race, navigating different contexts.
+                        That gives you a perspective on empathy and code-switching that translates
+                        directly to working across teams and stakeholders.
+                    </p>
+                </div>
+            </div>
+
+            <div class="mt-8">
+                <p class="text-sm font-semibold text-ink mb-3">On the shelf right now</p>
+                <div class="flex flex-wrap gap-x-1 gap-y-1 text-[13px] text-stone">
+                    <span class="bg-white border border-stone/10 px-3 py-1.5 rounded"><em>Thinking in Bets</em> &mdash; Annie Duke</span>
+                    <span class="bg-white border border-stone/10 px-3 py-1.5 rounded"><em>Inspired</em> &mdash; Marty Cagan</span>
+                    <span class="bg-white border border-stone/10 px-3 py-1.5 rounded"><em>Nudge</em> &mdash; Thaler & Sunstein</span>
+                    <span class="bg-white border border-stone/10 px-3 py-1.5 rounded"><em>The Design of Everyday Things</em> &mdash; Don Norman</span>
+                    <span class="bg-white border border-stone/10 px-3 py-1.5 rounded"><em>Predictably Irrational</em> &mdash; Dan Ariely</span>
+                </div>
             </div>
         </section>
 
-        <div class="h-px bg-gray-800/60"></div>
-
-        <!-- Education -->
-        <section class="py-10 sm:py-14">
-            <h2 class="text-sm font-semibold uppercase tracking-wider text-[#E09F3E]/80 mb-4">Education</h2>
-            <div>
-                <h3 class="font-semibold text-white">University of Virginia</h3>
-                <p class="text-sm text-gray-500 mt-0.5">B.S. Systems Engineering, Minor in Economics &middot; 2019</p>
-            </div>
-        </section>
-
-        <div class="h-px bg-gray-800/60"></div>
+        <div class="section-rule"></div>
 
         <!-- Contact -->
-        <section class="py-10 sm:py-14">
-            <h2 class="text-sm font-semibold uppercase tracking-wider text-[#E09F3E]/80 mb-4">Contact</h2>
-            <div class="space-y-2 text-[15px]">
-                <p class="text-gray-400"><span class="text-gray-600 inline-block w-16">Email</span> <a href="mailto:marcus@marcuswebb.me" class="text-[#E09F3E] hover:underline">marcus@marcuswebb.me</a></p>
-                <p class="text-gray-400"><span class="text-gray-600 inline-block w-16">Based in</span> New York, NY</p>
+        <section class="py-14 sm:py-20">
+            <p class="text-xs font-semibold uppercase tracking-[0.2em] text-amber mb-4">Let's Talk</p>
+            <p class="text-[15px] text-stone leading-relaxed mb-5 max-w-lg">
+                Looking for product roles in B2B SaaS, data infrastructure, developer tools, and AI/ML.
+                Based in Brooklyn. Open to remote, hybrid in NYC, or relocating to SF or Seattle.
+            </p>
+            <div class="flex flex-wrap gap-4 items-center">
+                <a href="mailto:marcus.d.webb.pm@gmail.com" class="inline-block text-[15px] text-amber font-semibold hover:underline">
+                    marcus.d.webb.pm@gmail.com
+                </a>
             </div>
         </section>
 
     </main>
 
-    <footer class="border-t border-gray-800/60">
-        <div class="max-w-3xl mx-auto px-6 py-8 text-center text-xs text-gray-700">
-            &copy; 2026 Marcus Webb
+    <footer class="max-w-3xl mx-auto px-6 sm:px-8">
+        <div class="border-t border-stone/8 py-8 flex items-center justify-between">
+            <span class="text-xs text-pebble">&copy; 2026 Marcus Webb</span>
+            <span class="text-xs text-pebble">Brooklyn, NY</span>
         </div>
     </footer>
 
